@@ -1,0 +1,57 @@
+*, *::after, *::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+html {
+    font-size: 62.5%;/*changes browser default of 16px to font size default of 1rem = 10px*/
+
+    @include respond(tablet-wide) {
+        font-size: 56.25%; //1rem = 9px, 9/16=56.25%
+    }
+
+    @include respond(tablet-reg) {//this will work for phone as well
+        font-size: 50%; //1rem = 8px, 8/16=50%
+    }
+
+    @include respond(desktop-big) {
+        font-size: 75%; //1rem = 12px, 12/16=75%
+    }
+}
+
+body {
+    font-family: 'Verdana', sans-serif;
+    font-weight: 400;
+    font-size: 1.6rem;
+    line-height: 1.7;
+    color: $color-gray-dark-2;
+    box-sizing: border-box;
+    background-color: $color-gray-light;
+}
+
+.wrapper {
+    position: absolute;
+    width: 90%;
+    height: 75vh;
+    margin: 0 auto;
+    padding: 0 1rem;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: $color-white;
+    border-radius: 5px;
+    box-shadow: 1px 2px 8px rgba($color-black, .3);
+    overflow: hidden;
+
+    @include respond(phone) {
+       height: 80vh;
+    }
+}
+
+.flex-container {
+    position: absolute;
+    bottom: 4rem; 
+    left: 50%;
+    transform: translate(-50%, 0);
+}

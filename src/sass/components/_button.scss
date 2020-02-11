@@ -1,0 +1,149 @@
+.active {
+    background-color: $color-blue-light !important;
+    color: $color-white !important;
+    box-shadow: 0 .5rem 1rem rgba($color-black-dark, .15);
+    transform: translateY(0);
+}
+
+.btn {
+    transition: .2s all;
+    text-align: center;
+    border: 2px solid $color-blue-light;
+    width: 90%;
+    font-weight: 700;
+    font-size: 1.4rem;
+    border-radius: 5px;
+    padding: 1rem .7rem;
+    background-color: transparent;
+    color: $color-blue-light;
+    display: inline-block;
+    text-decoration: none;
+    
+    &:hover {
+        background-color: $color-blue-light;
+        padding: 1rem 1.5rem;
+        color: $color-white;
+        box-shadow: 0 1rem 2rem rgba($color-black-dark, .15);
+        transform: translateY(-2px);
+    }
+    &:active {
+        box-shadow: 0 .5rem 1rem rgba($color-black-dark, .15);
+        transform: translateY(0);
+    }
+    &:focus {
+        outline: 0;
+    }
+    &-blue {
+        display: flex;
+        justify-content: center;
+        width: 35%;
+        height: 50px;
+        color: $color-white;
+        background-color: $color-blue-light;
+        font-size: 1.6rem;
+        border-color: transparent;
+        margin-left: auto;
+        margin-right: auto;
+        &:hover {
+            background-color: transparent;
+            padding: 1rem 1.5rem;
+            color: $color-blue-light;
+            box-shadow: 0 1rem 2rem rgba($color-black-dark, .15);
+            transform: translateY(-2px);
+            border-color: $color-blue-light;
+        }
+        &:active {
+            box-shadow: 0 .5rem 1rem rgba($color-black-dark, .15);
+            transform: translateY(0);
+        }
+    }
+
+    &-white {
+        width: 90%;
+        color: $color-black;
+        background-color: $color-white;
+        font-size: 1.2rem;
+        border-color: transparent;
+        &:hover {
+            background-color: transparent;
+            padding: 1rem 1.5rem;
+            color: $color-black;
+            box-shadow: 0 1rem 2rem rgba($color-black-dark, .15);
+            transform: translateY(-2px);
+            border-color: $color-black;
+        }
+        &:active {
+            box-shadow: 0 .5rem 1rem rgba($color-black-dark, .15);
+            transform: translateY(0);
+        }
+    }
+
+    &-clear {
+        width: 90%;
+        color: $color-white;
+        background-color: transparent;
+        font-size: 1.2rem;
+        border-color: $color-white;
+        &:hover {
+            background-color: $color-black;
+            padding: 1rem 1.5rem;
+            color: $color-white;
+            box-shadow: 0 1rem 2rem rgba($color-black-dark, .15);
+            transform: translateY(-2px);
+            border-color: transparent;
+        }
+        &:active {
+            box-shadow: 0 .5rem 1rem rgba($color-black-dark, .15);
+            transform: translateY(0);
+        }
+    }
+
+    &-filter {
+        margin-top: 4rem;
+        margin-bottom: 0px;
+        width: 90%;
+        color: $color-white;
+        background-color: $color-red;
+        font-size: 1.2rem;
+        border-color: transparent;
+
+        @include respond(phone){
+            width: 100%;
+            margin-top: 0rem;
+            margin-bottom: 3.5rem;
+        }
+        &:hover {
+            background-color: transparent;
+            padding: 1rem 1.5rem;
+            color: $color-red;
+            box-shadow: 0 1rem 2rem rgba($color-black-dark, .15);
+            transform: translateY(-2px);
+            border-color: $color-red;
+        }
+        &:active {
+            box-shadow: 0 .5rem 1rem rgba($color-black-dark, .15);
+            transform: translateY(0);
+        }
+    }
+
+    &-small {
+        width: 8rem;
+        margin: 1rem;
+        padding: .5rem 1rem;
+
+        &:hover {
+            background-color: $color-blue-light;
+            padding: .5rem 1rem;
+            box-shadow: 0 1rem 2rem rgba($color-black-dark, .15);
+            transform: translateY(-2px);
+        }
+        &:active {
+            box-shadow: 0 .5rem 1rem rgba($color-black-dark, .15);
+            transform: translateY(0);
+        }
+    }
+}
+input[type='radio'] {
+    visibility: hidden;
+    position: absolute;
+}

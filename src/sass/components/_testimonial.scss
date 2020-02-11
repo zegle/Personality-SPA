@@ -1,0 +1,63 @@
+.testimonial {
+  display: block !important;
+}
+/* Owl Carousel */
+.owl-title {
+  font-weight: 900;
+  font-size: 3rem;
+  color: #2d2d2d;
+
+}
+
+.owl-prev {
+  background: url('https://res.cloudinary.com/milairagny/image/upload/v1487938188/left-arrow_rlxamy.png') left center no-repeat;
+  height: 54px;
+  position: absolute;
+  top: 50%;
+  width: 27px;
+  z-index: 1000;
+  left: 2%;
+  cursor: pointer;
+  color: transparent;
+  margin-top: -27px;
+
+  @include respond(phone) {
+    top: 120%;
+    left: 35%;
+  }
+}
+
+.owl-next {
+  background: url('https://res.cloudinary.com/milairagny/image/upload/v1487938220/right-arrow_zwe9sf.png') right center no-repeat;
+  height: 54px;
+  position: absolute;
+  top: 50%;
+  width: 27px;
+  z-index: 1000;
+  right: 2%;
+  cursor: pointer;
+  color: transparent;
+  margin-top: -27px;
+
+  @include respond(phone) {
+    top: 120%;
+    left: 60%;
+  }
+}
+
+.owl-prev:hover,
+.owl-next:hover {
+  opacity: 0.5;
+}
+
+
+.item p {
+  display: block;
+  width: 100%;
+  padding: 1rem 10rem;
+
+  @include respond(phone) {
+    padding: 1rem 0;
+  }
+}
+/* Owl Carousel */

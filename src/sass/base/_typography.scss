@@ -1,0 +1,123 @@
+
+.heading-primary {
+    backface-visibility: hidden; /*fixes animation stutter bug*/
+    font-size: 4rem;
+    margin: 8vw 0 1rem 0;
+
+    &::after {
+        content: "";
+        position: relative;
+        display: flex;
+        margin: auto;
+        border-bottom: 1.5px solid $color-gray-dark;
+        width: 30rem;
+    }
+
+    &-2 {
+        color: $color-black;
+        backface-visibility: hidden; /*fixes animation stutter bug*/
+        font-size: 2.4rem;
+        font-weight: 400;
+        margin: 1rem 0;
+        
+        &::after {
+            content: "";
+            display: block;
+            border-bottom: 1.5px solid $color-gray-dark;
+            width: 25rem;
+            margin: 0 auto;
+        }
+    }
+    &-3 {
+        color: $color-white;
+        backface-visibility: hidden; /*fixes animation stutter bug*/
+        font-size: 2.4rem;
+        font-weight: 400;
+        margin: 1rem 0;
+        
+        &::after {
+            content: "";
+            display: block;
+            border-bottom: 1.5px solid $color-white;
+            width: 30rem;
+        }
+        @include respond(phone) {
+            font-size: 2.6rem;
+        }
+    }
+
+}
+
+
+.heading-secondary {
+    font-size: 6rem;
+    display: block;
+    color: $color-gray-dark-2;
+    margin-top: -2rem;
+    @include respond(tablet-reg) {
+        font-size: 6rem;
+    }
+
+    @include respond(phone) {
+        font-size: 5rem;
+        margin-top: 1rem;
+    }
+
+    &-2 {
+        font-size: 5rem;
+        display: block;
+        color: $color-gray-dark-2;
+
+        @include respond(phone) {
+            font-size: 3rem;
+        }
+    }
+}
+
+.heading-tertiary {
+    font-size: 2rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    margin-top: 1rem;
+    margin-bottom: 3rem;
+        
+        &::after {
+            content: "";
+            display: block;
+            border-bottom: 1px solid $color-white;
+            width: 25rem;
+
+            @include respond(phone) {
+                width: 40rem;
+                margin: 0 auto;
+            }
+        }
+    
+    @include respond(desktop-big) {
+        margin-top: 2rem;
+        margin-bottom: 5rem;
+    }
+    @include respond(phone) {
+        font-size: 2.2rem;
+        text-align: center;
+    }
+}
+
+.paragraph {
+    color: $color-white;
+    text-align: center;
+    backface-visibility: hidden; /*fixes animation stutter bug*/
+    font-size: 1.5rem;
+    margin: 1rem 0;
+
+    @include respond(laptop) {
+        font-size: 2rem;
+    }
+    @include respond(phone) {
+        font-size: 1.5rem;
+    }
+
+    &:not(:last-child) {
+        margin-bottom: 3rem;
+    }
+}

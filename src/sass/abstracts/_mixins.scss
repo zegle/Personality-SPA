@@ -1,0 +1,46 @@
+@mixin clearfix {
+    &::after {
+        content: "";
+        display: table;
+        clear: both;
+    }
+}
+
+//media queries
+/*
+0-600px:    Phone
+600-900px:  Tablet Portrait
+900-1200px: Table Landscape
+1200-1800px:  Desktop
+1800px+:    Large desktop
+
+1em = 16px browser default
+*/
+
+//breakpoints - phone, tablet-reg, tablet-wide, desktop-big
+@mixin respond($breakpoint) {
+    @if $breakpoint == phone-small {
+        @media (max-width:23.375em) { @content };  //374px
+    }
+    @if $breakpoint == phone {
+        @media (max-width:37.5em) { @content };  //600px
+    }
+    @if $breakpoint == phone-big {
+        @media (max-width:47.9375em) { @content };  //767px
+    }
+    @if $breakpoint == tablet-reg {
+        @media (max-width:56.25em) { @content };  //900px
+    }
+    @if $breakpoint == laptop {
+        @media (max-width:64em) { @content };  //1024px
+    }
+    @if $breakpoint == tablet-wide {
+        @media (max-width:75em) { @content }; //1200px
+    }
+    @if $breakpoint == desktop-big {
+        @media (min-width: 93.75em) { @content };  //1500px+
+    }
+    @if $breakpoint == desktop-xl {
+        @media (min-width: 112.5em) { @content };  //1800px+
+    }
+}
